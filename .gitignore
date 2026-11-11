@@ -1,0 +1,26 @@
+# Local/runtime output
+logs/
+reports/
+Byson-Update_*.log
+Byson-Update_*.json
+Dell-Command-Update_*.log
+DeviceId.txt
+
+# Release artifacts
+*.zip
+release/
+dist/
+
+# Secrets / local environment
+.env
+.dev.vars
+*.key
+*.pfx
+*.p12
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.tmp

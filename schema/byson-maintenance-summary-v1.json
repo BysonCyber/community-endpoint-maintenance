@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bysoncyber.com/schemas/byson-maintenance-summary-v1.json",
+  "title": "Byson Cyber Endpoint Maintenance Summary v1",
+  "type": "object",
+  "required": [
+    "SchemaVersion",
+    "ScriptVersion",
+    "RunId",
+    "DeviceId",
+    "Operation",
+    "Started",
+    "Computer",
+    "OverallStatus",
+    "WarningCount",
+    "ErrorCount",
+    "RebootRequired"
+  ],
+  "properties": {
+    "SchemaVersion": {
+      "const": "1.0"
+    },
+    "ScriptVersion": {
+      "type": "string"
+    },
+    "RunId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "DeviceId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "Operation": {
+      "type": "string",
+      "enum": [
+        "Maintenance",
+        "InstallScheduledTask",
+        "RemoveScheduledTask"
+      ]
+    },
+    "Profile": {
+      "type": "string"
+    },
+    "Started": {
+      "type": "string"
+    },
+    "Completed": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "DurationSeconds": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "OverallStatus": {
+      "type": "string",
+      "enum": [
+        "Unknown",
+        "Healthy",
+        "Warning",
+        "Error"
+      ]
+    },
+    "WarningCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "ErrorCount": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "Computer": {
+      "type": "string"
+    },
+    "Manufacturer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "Model": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "OSCaption": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "OSVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "OSBuild": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "BIOSVersion": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "SystemDriveFreeGB": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "SecureBootEnabled": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "TPMPresent": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "BitLockerProtection": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "WindowsUpdatesPending": {
+      "type": "integer"
+    },
+    "WindowsUpdatesInstalled": {
+      "type": "integer"
+    },
+    "RebootRequired": {
+      "type": "boolean"
+    },
+    "RebootPolicy": {
+      "type": "string"
+    },
+    "OEMManufacturer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "OEMAdapter": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
